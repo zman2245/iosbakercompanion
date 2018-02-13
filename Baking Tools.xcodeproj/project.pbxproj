@@ -15,6 +15,9 @@
 		14FF6E7F20329DAF00FA0BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FF6E7D20329DAF00FA0BAE /* LaunchScreen.storyboard */; };
 		14FF6E8A20329DAF00FA0BAE /* Baking_ToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E8920329DAF00FA0BAE /* Baking_ToolsTests.swift */; };
 		14FF6E9520329DAF00FA0BAE /* Baking_ToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E9420329DAF00FA0BAE /* Baking_ToolsUITests.swift */; };
+		14FF6EA32032A2C400FA0BAE /* ProTipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6EA22032A2C400FA0BAE /* ProTipsViewController.swift */; };
+		14FF6EA62032A77900FA0BAE /* ProTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6EA52032A77900FA0BAE /* ProTip.swift */; };
+		14FF6EA82032A7BC00FA0BAE /* ProTipData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6EA72032A7BC00FA0BAE /* ProTipData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		14FF6E9020329DAF00FA0BAE /* Baking ToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Baking ToolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FF6E9420329DAF00FA0BAE /* Baking_ToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baking_ToolsUITests.swift; sourceTree = "<group>"; };
 		14FF6E9620329DAF00FA0BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14FF6EA22032A2C400FA0BAE /* ProTipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProTipsViewController.swift; sourceTree = "<group>"; };
+		14FF6EA52032A77900FA0BAE /* ProTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProTip.swift; sourceTree = "<group>"; };
+		14FF6EA72032A7BC00FA0BAE /* ProTipData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProTipData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,11 @@
 		14FF6E7120329DAF00FA0BAE /* Baking Tools */ = {
 			isa = PBXGroup;
 			children = (
+				14FF6EA42032A76300FA0BAE /* Model */,
 				14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */,
 				14FF6E7420329DAF00FA0BAE /* FirstViewController.swift */,
 				14FF6E7620329DAF00FA0BAE /* SecondViewController.swift */,
+				14FF6EA22032A2C400FA0BAE /* ProTipsViewController.swift */,
 				14FF6E7820329DAF00FA0BAE /* Main.storyboard */,
 				14FF6E7B20329DAF00FA0BAE /* Assets.xcassets */,
 				14FF6E7D20329DAF00FA0BAE /* LaunchScreen.storyboard */,
@@ -126,6 +134,15 @@
 				14FF6E9620329DAF00FA0BAE /* Info.plist */,
 			);
 			path = "Baking ToolsUITests";
+			sourceTree = "<group>";
+		};
+		14FF6EA42032A76300FA0BAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14FF6EA52032A77900FA0BAE /* ProTip.swift */,
+				14FF6EA72032A7BC00FA0BAE /* ProTipData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +280,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FF6E7720329DAF00FA0BAE /* SecondViewController.swift in Sources */,
+				14FF6EA82032A7BC00FA0BAE /* ProTipData.swift in Sources */,
+				14FF6EA62032A77900FA0BAE /* ProTip.swift in Sources */,
 				14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */,
+				14FF6EA32032A2C400FA0BAE /* ProTipsViewController.swift in Sources */,
 				14FF6E7520329DAF00FA0BAE /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
