@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E320362F8100A8FA32 /* Ingredient.swift */; };
+		1493D9E620363BC200A8FA32 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E520363BC200A8FA32 /* Units.swift */; };
 		14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */; };
 		14FF6E7520329DAF00FA0BAE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7420329DAF00FA0BAE /* FirstViewController.swift */; };
 		14FF6E7720329DAF00FA0BAE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7620329DAF00FA0BAE /* SecondViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1493D9E320362F8100A8FA32 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		1493D9E520363BC200A8FA32 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		14FF6E6F20329DAF00FA0BAE /* Baking Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baking Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14FF6E7420329DAF00FA0BAE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1493D9E220362F5500A8FA32 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				1493D9E320362F8100A8FA32 /* Ingredient.swift */,
+				1493D9E520363BC200A8FA32 /* Units.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		14FF6E6620329DAF00FA0BAE = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,7 @@
 		14FF6E7120329DAF00FA0BAE /* Baking Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1493D9E220362F5500A8FA32 /* Enums */,
 				14FF6EA42032A76300FA0BAE /* Model */,
 				14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */,
 				14FF6E7420329DAF00FA0BAE /* FirstViewController.swift */,
@@ -279,6 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */,
+				1493D9E620363BC200A8FA32 /* Units.swift in Sources */,
 				14FF6E7720329DAF00FA0BAE /* SecondViewController.swift in Sources */,
 				14FF6EA82032A7BC00FA0BAE /* ProTipData.swift in Sources */,
 				14FF6EA62032A77900FA0BAE /* ProTip.swift in Sources */,
