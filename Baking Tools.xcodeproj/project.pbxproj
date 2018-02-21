@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14460B1A203DFEB300CCA4F5 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14460B19203DFEB300CCA4F5 /* Conversion.swift */; };
 		1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E320362F8100A8FA32 /* Ingredient.swift */; };
 		1493D9E620363BC200A8FA32 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E520363BC200A8FA32 /* Units.swift */; };
 		14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14460B19203DFEB300CCA4F5 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		1493D9E320362F8100A8FA32 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		1493D9E520363BC200A8FA32 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		14FF6E6F20329DAF00FA0BAE /* Baking Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baking Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 			children = (
 				1493D9E320362F8100A8FA32 /* Ingredient.swift */,
 				1493D9E520363BC200A8FA32 /* Units.swift */,
+				14460B19203DFEB300CCA4F5 /* Conversion.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */,
 				1493D9E620363BC200A8FA32 /* Units.swift in Sources */,
 				14FF6E7720329DAF00FA0BAE /* SecondViewController.swift in Sources */,
+				14460B1A203DFEB300CCA4F5 /* Conversion.swift in Sources */,
 				14FF6EA82032A7BC00FA0BAE /* ProTipData.swift in Sources */,
 				14FF6EA62032A77900FA0BAE /* ProTip.swift in Sources */,
 				14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */,
