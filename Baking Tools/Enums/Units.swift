@@ -8,52 +8,38 @@
 
 import Foundation
 
+struct Unit {
+    var name : String
+    var isMass : Bool
+    var toCommonFactor : Double
+}
+
 struct Units {
+    static let GRAMS = Unit(name: "g", isMass: true, toCommonFactor: 1.0)
+    static let OUNCES = Unit(name: "oz", isMass: true, toCommonFactor: 28.3495)
+    static let MILLILITERS = Unit(name: "mL", isMass: false, toCommonFactor: 1.0)
+    static let CUPS = Unit(name: "cups", isMass: false, toCommonFactor: 240.0)
+    static let TEASPOONS = Unit(name: "tsp", isMass: false, toCommonFactor: 4.92892)
+    static let TABLESPOONS = Unit(name: "Tbl", isMass: false, toCommonFactor: 14.78676)
+    static let FLUID_OUNCES = Unit(name: "fl oz", isMass: false, toCommonFactor: 29.5735)
+    
     static let Basic = [
-        "Grams": [
-            "name": "Grams",
-            "isMass": true,
-            "toCommonFactor": 1.0
-        ], "Ounces": [
-            "name": "Ounces",
-            "isMass": true,
-            "toCommonFactor": 28.3495
-        ], "Milliliters": [
-            "name": "Milliliters",
-            "isMass": false,
-            "toCommonFactor": 1.0
-        ], "Cups": [
-            "name": "Cups",
-            "isMass": false,
-            "toCommonFactor": 240.0
-        ], "Teaspoons": [
-            "name": "Teaspoons",
-            "isMass": false,
-            "toCommonFactor": 4.92892
-        ], "Tablespoons": [
-            "name": "Tablespoons",
-            "isMass": false,
-            "toCommonFactor": 14.78676
-        ], "Fluid Ounces": [
-            "name": "Fluid Ounces",
-            "isMass": false,
-            "toCommonFactor": 29.5735
-        ]
+        "Grams": GRAMS,
+        "Ounces": OUNCES,
+        "Milliliters": MILLILITERS,
+        "Cups": CUPS,
+        "Teaspoons": TEASPOONS,
+        "Tablespoons": TABLESPOONS,
+        "Fluid Ounces": FLUID_OUNCES
     ]
 
+    static let KILOGRAMS = Unit(name: "kg", isMass: true, toCommonFactor: 1000.0)
+    static let POUNDS = Unit(name: "lb", isMass: true, toCommonFactor: 453.592)
+    static let LITERS = Unit(name: "L", isMass: false, toCommonFactor: 1000.0)
+    
     static let Extended = [
-        "Kilograms": [
-            "name": "Kilograms",
-            "isMass": true,
-            "toCommonFactor": 1000.0
-        ], "Pounds": [
-            "name": "Pounds",
-            "isMass": true,
-            "toCommonFactor": 453.592
-        ], "Liters": [
-            "name": "Liters",
-            "isMass": false,
-            "toCommonFactor": 1000.0
-        ]
+        "Kilograms": KILOGRAMS,
+        "Pounds": POUNDS,
+        "Liters": LITERS
     ]
 }
