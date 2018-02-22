@@ -154,6 +154,13 @@
                             <outlet property="delegate" destination="f32-Vs-r21" id="ewH-jH-yZR"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Ingredients" id="DNh-dW-uom" userLabel="Ingredients">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ePA-eb-pe0">
+                            <connections>
+                                <segue destination="hpG-Cu-NXv" kind="presentation" id="Sh7-em-cJ8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xn1-uE-es4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,7 +255,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="UEn-B4-b9x"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rqK-h7-O4z">
+                    <navigationItem key="navigationItem" title="Add Recipe" id="rqK-h7-O4z">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pdq-uE-iCf">
                             <connections>
                                 <action selector="tapCancel:" destination="u1J-s5-EmY" id="CPT-Fc-Lzb"/>
@@ -268,6 +275,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTE-rN-hbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2348" y="1317.3913043478262"/>
+        </scene>
+        <!--AddIngredient-->
+        <scene sceneID="afv-fD-x36">
+            <objects>
+                <viewController id="ypC-40-Tob" userLabel="AddIngredient" customClass="AddIngredientViewController" customModule="Baking_Tools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZeP-3H-jwT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="qX5-C6-mBV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Ingredient" id="3S7-Z5-bmz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GmA-hy-yfl">
+                            <connections>
+                                <action selector="tapCancel:" destination="ypC-40-Tob" id="eYY-Vd-oPc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="y4b-eJ-jP3">
+                            <connections>
+                                <action selector="tapSave:" destination="ypC-40-Tob" id="Fr0-GS-vya"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGe-BB-aIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4096.8000000000002" y="1138.3808095952024"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -305,6 +339,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BZN-jz-obY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2008" y="1316.9415292353824"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bUN-SU-YPO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hpG-Cu-NXv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0a-jP-Y16">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ypC-40-Tob" kind="relationship" relationship="rootViewController" id="2ye-7h-WRl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EnX-iE-tba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3758.4000000000001" y="1138.8305847076463"/>
         </scene>
     </scenes>
     <resources>
