@@ -107,13 +107,16 @@
                             <outlet property="delegate" destination="JWu-yY-qsG" id="TZx-OY-ZZj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="m4p-D8-Cpv">
+                    <navigationItem key="navigationItem" title="Recipes" id="m4p-D8-Cpv" userLabel="Recipes">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZTB-MJ-kHb">
                             <connections>
                                 <segue destination="qAh-BZ-N6o" kind="presentation" id="CEV-AQ-SCH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="f32-Vs-r21" kind="show" identifier="ShowRecipeIngredients" id="j3I-JO-FLj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRU-lo-j9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

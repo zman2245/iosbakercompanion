@@ -12,6 +12,8 @@ import CoreData
 class RecipesViewController : UITableViewController, NSFetchedResultsControllerDelegate {
         
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    var context : NSManagedObjectContext! = nil
+    var selectedRecipe : RecipeModel? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +22,9 @@ class RecipesViewController : UITableViewController, NSFetchedResultsControllerD
         let departmentSort = NSSortDescriptor(key: "modified", ascending: true)
         request.sortDescriptors = [departmentSort]
         let delegate = UIApplication.shared.delegate as! AppDelegate
-        let moc = delegate.persistentContainer.viewContext
+        context = delegate.persistentContainer.viewContext
         
-//        let moc = (UIApplication.sharedApplication.delegate as! AppDelegate).managedObjectContext
-        
-        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultsController.delegate = self
         
         do {
@@ -38,6 +38,16 @@ class RecipesViewController : UITableViewController, NSFetchedResultsControllerD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is IngredientsViewController {
+            let vc = segue.destination as? IngredientsViewController
+            vc?.context = self.context
+            vc?.recipe = self.selectedRecipe
+        }
+    }
+    
+    // MARK: - UITableView delegate methods
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -62,6 +72,17 @@ class RecipesViewController : UITableViewController, NSFetchedResultsControllerD
         let sectionInfo = sections[section]
         return sectionInfo.numberOfObjects
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let object = self.fetchedResultsController?.object(at: indexPath) else {
+            fatalError("Couldn't get object at selected row. Very strange.")
+        }
+        
+        self.selectedRecipe = (object as! RecipeModel)
+        self.performSegue(withIdentifier: "ShowRecipeIngredients", sender: self)
+    }
+    
+    // MARK: - NSFetchedResultsControllerDelegate methods
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
