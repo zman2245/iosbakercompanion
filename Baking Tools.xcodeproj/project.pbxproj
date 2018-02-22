@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14460B1A203DFEB300CCA4F5 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14460B19203DFEB300CCA4F5 /* Conversion.swift */; };
+		14654FC1203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14654FBF203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld */; };
 		1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E320362F8100A8FA32 /* Ingredient.swift */; };
 		1493D9E620363BC200A8FA32 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E520363BC200A8FA32 /* Units.swift */; };
 		14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		14460B19203DFEB300CCA4F5 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		14654FC0203F3E1D00EEB33C /* BroChefDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BroChefDataModel.xcdatamodel; sourceTree = "<group>"; };
 		1493D9E320362F8100A8FA32 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		1493D9E520363BC200A8FA32 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		14FF6E6F20329DAF00FA0BAE /* Baking Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baking Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14654FE3203F41F300EEB33C /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		1493D9E220362F5500A8FA32 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +130,7 @@
 		14FF6E7120329DAF00FA0BAE /* Baking Tools */ = {
 			isa = PBXGroup;
 			children = (
+				14654FE3203F41F300EEB33C /* DataModel */,
 				1493D9E220362F5500A8FA32 /* Enums */,
 				14FF6EA42032A76300FA0BAE /* Model */,
 				14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */,
@@ -131,6 +141,7 @@
 				14FF6E7B20329DAF00FA0BAE /* Assets.xcassets */,
 				14FF6E7D20329DAF00FA0BAE /* LaunchScreen.storyboard */,
 				14FF6E8020329DAF00FA0BAE /* Info.plist */,
+				14654FBF203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld */,
 			);
 			path = "Baking Tools";
 			sourceTree = "<group>";
@@ -303,6 +314,7 @@
 				14FF6EA82032A7BC00FA0BAE /* ProTipData.swift in Sources */,
 				14FF6EA62032A77900FA0BAE /* ProTip.swift in Sources */,
 				14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */,
+				14654FC1203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld in Sources */,
 				14FF6EA32032A2C400FA0BAE /* ProTipsViewController.swift in Sources */,
 				14FF6E7520329DAF00FA0BAE /* FirstViewController.swift in Sources */,
 			);
@@ -596,6 +608,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		14654FBF203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				14654FC0203F3E1D00EEB33C /* BroChefDataModel.xcdatamodel */,
+			);
+			currentVersion = 14654FC0203F3E1D00EEB33C /* BroChefDataModel.xcdatamodel */;
+			path = BroChefDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 14FF6E6720329DAF00FA0BAE /* Project object */;
 }
