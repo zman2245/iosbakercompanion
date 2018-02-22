@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		14460B1A203DFEB300CCA4F5 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14460B19203DFEB300CCA4F5 /* Conversion.swift */; };
 		14654FC1203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14654FBF203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld */; };
+		14654FED203F54F300EEB33C /* AddEditRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */; };
 		1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E320362F8100A8FA32 /* Ingredient.swift */; };
 		1493D9E620363BC200A8FA32 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E520363BC200A8FA32 /* Units.swift */; };
 		14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */; };
 		14FF6E7520329DAF00FA0BAE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7420329DAF00FA0BAE /* FirstViewController.swift */; };
-		14FF6E7720329DAF00FA0BAE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7620329DAF00FA0BAE /* SecondViewController.swift */; };
+		14FF6E7720329DAF00FA0BAE /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7620329DAF00FA0BAE /* RecipesViewController.swift */; };
 		14FF6E7A20329DAF00FA0BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FF6E7820329DAF00FA0BAE /* Main.storyboard */; };
 		14FF6E7C20329DAF00FA0BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FF6E7B20329DAF00FA0BAE /* Assets.xcassets */; };
 		14FF6E7F20329DAF00FA0BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14FF6E7D20329DAF00FA0BAE /* LaunchScreen.storyboard */; };
@@ -44,12 +45,13 @@
 /* Begin PBXFileReference section */
 		14460B19203DFEB300CCA4F5 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		14654FC0203F3E1D00EEB33C /* BroChefDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BroChefDataModel.xcdatamodel; sourceTree = "<group>"; };
+		14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditRecipeViewController.swift; sourceTree = "<group>"; };
 		1493D9E320362F8100A8FA32 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		1493D9E520363BC200A8FA32 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		14FF6E6F20329DAF00FA0BAE /* Baking Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baking Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14FF6E7420329DAF00FA0BAE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		14FF6E7620329DAF00FA0BAE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		14FF6E7620329DAF00FA0BAE /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		14FF6E7920329DAF00FA0BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14FF6E7B20329DAF00FA0BAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FF6E7E20329DAF00FA0BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,13 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14654FE3203F41F300EEB33C /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataModel;
-			sourceTree = "<group>";
-		};
 		1493D9E220362F5500A8FA32 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +125,13 @@
 		14FF6E7120329DAF00FA0BAE /* Baking Tools */ = {
 			isa = PBXGroup;
 			children = (
-				14654FE3203F41F300EEB33C /* DataModel */,
 				1493D9E220362F5500A8FA32 /* Enums */,
 				14FF6EA42032A76300FA0BAE /* Model */,
 				14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */,
 				14FF6E7420329DAF00FA0BAE /* FirstViewController.swift */,
-				14FF6E7620329DAF00FA0BAE /* SecondViewController.swift */,
+				14FF6E7620329DAF00FA0BAE /* RecipesViewController.swift */,
 				14FF6EA22032A2C400FA0BAE /* ProTipsViewController.swift */,
+				14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */,
 				14FF6E7820329DAF00FA0BAE /* Main.storyboard */,
 				14FF6E7B20329DAF00FA0BAE /* Assets.xcassets */,
 				14FF6E7D20329DAF00FA0BAE /* LaunchScreen.storyboard */,
@@ -309,7 +304,7 @@
 			files = (
 				1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */,
 				1493D9E620363BC200A8FA32 /* Units.swift in Sources */,
-				14FF6E7720329DAF00FA0BAE /* SecondViewController.swift in Sources */,
+				14FF6E7720329DAF00FA0BAE /* RecipesViewController.swift in Sources */,
 				14460B1A203DFEB300CCA4F5 /* Conversion.swift in Sources */,
 				14FF6EA82032A7BC00FA0BAE /* ProTipData.swift in Sources */,
 				14FF6EA62032A77900FA0BAE /* ProTip.swift in Sources */,
@@ -317,6 +312,7 @@
 				14654FC1203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld in Sources */,
 				14FF6EA32032A2C400FA0BAE /* ProTipsViewController.swift in Sources */,
 				14FF6E7520329DAF00FA0BAE /* FirstViewController.swift in Sources */,
+				14654FED203F54F300EEB33C /* AddEditRecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
