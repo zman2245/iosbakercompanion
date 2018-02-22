@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class RecipesViewController : UITableViewController, NSFetchedResultsControllerDelegate {
-    
+        
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
 
     override func viewDidLoad() {

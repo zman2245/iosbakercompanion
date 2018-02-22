@@ -75,21 +75,30 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Recipes-->
         <scene sceneID="Gdp-IN-mCH">
             <objects>
-                <tableViewController id="JWu-yY-qsG" customClass="RecipesViewController" customModule="Baking_Tools" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="JWu-yY-qsG" userLabel="Recipes" customClass="RecipesViewController" customModule="Baking_Tools" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ka8-5S-Iab">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ekx-Db-jug">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" textLabel="nZA-Na-RMO" style="IBUITableViewCellStyleDefault" id="ekx-Db-jug" userLabel="RecipeCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ekx-Db-jug" id="Vdw-2r-g8j">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nZA-Na-RMO">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -98,7 +107,13 @@
                             <outlet property="delegate" destination="JWu-yY-qsG" id="TZx-OY-ZZj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="m4p-D8-Cpv"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="m4p-D8-Cpv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZTB-MJ-kHb">
+                            <connections>
+                                <segue destination="qAh-BZ-N6o" kind="presentation" id="CEV-AQ-SCH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRU-lo-j9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" textLabel="jAH-He-47t" style="IBUITableViewCellStyleDefault" id="3Md-L7-7mp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientsCell" textLabel="jAH-He-47t" style="IBUITableViewCellStyleDefault" id="3Md-L7-7mp" userLabel="IngredientsCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Md-L7-7mp" id="jIH-06-mmg">
@@ -141,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="2058" y="387"/>
         </scene>
-        <!--Recipes-->
+        <!--RecipesNav-->
         <scene sceneID="CZ9-jN-EPV">
             <objects>
-                <navigationController id="RyZ-04-8cl" userLabel="Recipes" sceneMemberID="viewController">
+                <navigationController id="RyZ-04-8cl" userLabel="RecipesNav" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recipes" id="gf4-bO-baM" userLabel="Recipes"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xve-9M-QnM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -206,17 +221,50 @@
         <!--AddEditRecipe-->
         <scene sceneID="Skk-T1-mys">
             <objects>
-                <viewController id="u1J-s5-EmY" userLabel="AddEditRecipe" customClass="AddEditRecipeViewController" customModule="Baking_Tools" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addEditRecipeID" id="u1J-s5-EmY" userLabel="AddEditRecipe" customClass="AddEditRecipeViewController" customModule="Baking_Tools" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yFl-cb-PzN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9s-cI-9vh" userLabel="Name">
+                                <rect key="frame" x="16" y="58" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2LU-b1-KyE" userLabel="Notes">
+                                <rect key="frame" x="16" y="127" width="343" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="UEn-B4-b9x"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rqK-h7-O4z">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="pdq-uE-iCf">
+                            <connections>
+                                <action selector="tapCancel:" destination="u1J-s5-EmY" id="CPT-Fc-Lzb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7KE-w0-pV5">
+                            <connections>
+                                <action selector="tapSave:" destination="u1J-s5-EmY" id="oE3-Xh-JZE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="name" destination="Q9s-cI-9vh" id="e60-d6-UEP"/>
+                        <outlet property="notes" destination="2LU-b1-KyE" id="eD0-Gz-NLA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTE-rN-hbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009" y="1318"/>
+            <point key="canvasLocation" x="2348" y="1317.3913043478262"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -236,6 +284,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r1I-HX-CuY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qAh-BZ-N6o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WZP-Qv-TLx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u1J-s5-EmY" kind="relationship" relationship="rootViewController" id="wSV-sQ-Dze"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZN-jz-obY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008" y="1316.9415292353824"/>
         </scene>
     </scenes>
     <resources>
