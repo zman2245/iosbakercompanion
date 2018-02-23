@@ -12,6 +12,8 @@
 		14654FED203F54F300EEB33C /* AddEditRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */; };
 		14654FEF203F5D7C00EEB33C /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FEE203F5D7C00EEB33C /* IngredientsViewController.swift */; };
 		14654FF1203F747500EEB33C /* AddIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FF0203F747500EEB33C /* AddIngredientViewController.swift */; };
+		14654FF32040991C00EEB33C /* CheatConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FF22040991C00EEB33C /* CheatConversion.swift */; };
+		14654FF52040995F00EEB33C /* CheatSheetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FF42040995F00EEB33C /* CheatSheetData.swift */; };
 		1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E320362F8100A8FA32 /* Ingredient.swift */; };
 		1493D9E620363BC200A8FA32 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E520363BC200A8FA32 /* Units.swift */; };
 		14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */; };
@@ -50,6 +52,8 @@
 		14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditRecipeViewController.swift; sourceTree = "<group>"; };
 		14654FEE203F5D7C00EEB33C /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		14654FF0203F747500EEB33C /* AddIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientViewController.swift; sourceTree = "<group>"; };
+		14654FF22040991C00EEB33C /* CheatConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatConversion.swift; sourceTree = "<group>"; };
+		14654FF42040995F00EEB33C /* CheatSheetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheetData.swift; sourceTree = "<group>"; };
 		1493D9E320362F8100A8FA32 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		1493D9E520363BC200A8FA32 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		14FF6E6F20329DAF00FA0BAE /* Baking Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baking Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,8 @@
 			children = (
 				14FF6EA52032A77900FA0BAE /* ProTip.swift */,
 				14FF6EA72032A7BC00FA0BAE /* ProTipData.swift */,
+				14654FF22040991C00EEB33C /* CheatConversion.swift */,
+				14654FF42040995F00EEB33C /* CheatSheetData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +317,8 @@
 				1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */,
 				14654FF1203F747500EEB33C /* AddIngredientViewController.swift in Sources */,
 				1493D9E620363BC200A8FA32 /* Units.swift in Sources */,
+				14654FF52040995F00EEB33C /* CheatSheetData.swift in Sources */,
+				14654FF32040991C00EEB33C /* CheatConversion.swift in Sources */,
 				14FF6E7720329DAF00FA0BAE /* RecipesViewController.swift in Sources */,
 				14460B1A203DFEB300CCA4F5 /* Conversion.swift in Sources */,
 				14FF6EA82032A7BC00FA0BAE /* ProTipData.swift in Sources */,
