@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class CheatSheetController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
 
     let COMPONENT_INGREDIENT = 0
     let COMPONENT_FROM_UNIT = 1
