@@ -15,6 +15,19 @@ class AddEditRecipeViewController : UIViewController {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var notes: UITextView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Annoyingly, apple makes it hard to make these behave similarly. UITextView doesn't even
+        // support a placeholder text. Sad!
+        notes.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+        notes.layer.borderWidth = 1.0
+        notes.layer.cornerRadius = 5
+        name.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
+        name.layer.borderWidth = 1.0
+        name.layer.cornerRadius = 5
+    }
+    
     @IBAction func tapSave(_ sender: UIBarButtonItem) {
         guard let nameText = name.text, !nameText.isEmpty else {
             self.tapCancel(sender)
