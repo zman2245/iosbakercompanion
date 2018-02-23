@@ -28,8 +28,8 @@ final class CheatSheetData {
             CheatConversion(from: "1 Cup Packed Brown Sugar", to: "200 g; 7 oz"),
             CheatConversion(from: "1 Cup Powder Sugar", to: "112 g; 4 oz"),
             CheatConversion(from: "1 Cup Cocoa Powder", to: "125 g; 4.5 oz"),
-            CheatConversion(from: "1 Stick; 1/2 Cup; 8 Tablespoons Butter", to: "113 g; 4 oz"),
-            CheatConversion(from: "1/2 Stick; 1/4 Cup; 4 Tablespoons Butter", to: "57 g; 2 oz")
+            CheatConversion(from: "1 Stick; 1/2 Cup; 8 Tbl Butter", to: "113 g; 4 oz"),
+            CheatConversion(from: "1/2 Stick; 1/4 Cup; 4 Tbl Butter", to: "57 g; 2 oz")
         ]
     }
 }
