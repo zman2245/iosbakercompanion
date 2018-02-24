@@ -123,7 +123,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cheat Sheet" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Cheat Sheet" image="cheatSheetImage" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="volToMassCheatTableView" destination="uTK-Je-tuL" id="AJP-9g-w9m"/>
                         <outlet property="volumeCheatTableView" destination="dH2-Z0-M1Z" id="Uiv-bO-G1O"/>
@@ -353,7 +353,7 @@
                             <outlet property="delegate" destination="w2P-fI-GdS" id="Q0M-el-MNP"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Pro Tips" id="PvC-1p-T5l"/>
+                    <tabBarItem key="tabBarItem" title="Pro Tips" image="starImage" id="PvC-1p-T5l"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FsT-S2-0Ul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -518,7 +518,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="cheatSheetImage" width="50" height="50"/>
         <image name="recipesImage" width="50" height="50"/>
+        <image name="starImage" width="50" height="50"/>
     </resources>
 </document>
