@@ -15,6 +15,7 @@
 		14654FF32040991C00EEB33C /* CheatConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FF22040991C00EEB33C /* CheatConversion.swift */; };
 		14654FF52040995F00EEB33C /* CheatSheetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FF42040995F00EEB33C /* CheatSheetData.swift */; };
 		14654FF820409E9000EEB33C /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FF720409E9000EEB33C /* ConverterViewController.swift */; };
+		146550012040E77500EEB33C /* ScreenLockSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146550002040E77500EEB33C /* ScreenLockSwitchViewController.swift */; };
 		1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E320362F8100A8FA32 /* Ingredient.swift */; };
 		1493D9E620363BC200A8FA32 /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1493D9E520363BC200A8FA32 /* Units.swift */; };
 		14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		14654FF22040991C00EEB33C /* CheatConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatConversion.swift; sourceTree = "<group>"; };
 		14654FF42040995F00EEB33C /* CheatSheetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheatSheetData.swift; sourceTree = "<group>"; };
 		14654FF720409E9000EEB33C /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		146550002040E77500EEB33C /* ScreenLockSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLockSwitchViewController.swift; sourceTree = "<group>"; };
 		1493D9E320362F8100A8FA32 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		1493D9E520363BC200A8FA32 /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
 		14FF6E6F20329DAF00FA0BAE /* Baking Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baking Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				14654FF720409E9000EEB33C /* ConverterViewController.swift */,
+				146550002040E77500EEB33C /* ScreenLockSwitchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				14654FC1203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld in Sources */,
 				14FF6EA32032A2C400FA0BAE /* ProTipsViewController.swift in Sources */,
 				14654FEF203F5D7C00EEB33C /* IngredientsViewController.swift in Sources */,
+				146550012040E77500EEB33C /* ScreenLockSwitchViewController.swift in Sources */,
 				14FF6E7520329DAF00FA0BAE /* CheatSheetController.swift in Sources */,
 				14654FED203F54F300EEB33C /* AddEditRecipeViewController.swift in Sources */,
 				14654FF820409E9000EEB33C /* ConverterViewController.swift in Sources */,
