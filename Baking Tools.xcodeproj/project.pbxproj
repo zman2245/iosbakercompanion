@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142EC06E20434F9500E593B7 /* BroColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EC06D20434F9500E593B7 /* BroColors.swift */; };
+		142EC0712043556F00E593B7 /* BroChefTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EC0702043556F00E593B7 /* BroChefTextField.swift */; };
+		142EC073204356B800E593B7 /* BroChefTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142EC072204356B800E593B7 /* BroChefTextView.swift */; };
 		14460B1A203DFEB300CCA4F5 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14460B19203DFEB300CCA4F5 /* Conversion.swift */; };
 		14654FC1203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14654FBF203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld */; };
 		14654FED203F54F300EEB33C /* AddEditRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142EC06D20434F9500E593B7 /* BroColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroColors.swift; sourceTree = "<group>"; };
+		142EC0702043556F00E593B7 /* BroChefTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroChefTextField.swift; sourceTree = "<group>"; };
+		142EC072204356B800E593B7 /* BroChefTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroChefTextView.swift; sourceTree = "<group>"; };
 		14460B19203DFEB300CCA4F5 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		14654FC0203F3E1D00EEB33C /* BroChefDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BroChefDataModel.xcdatamodel; sourceTree = "<group>"; };
 		14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditRecipeViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142EC06C20434F7900E593B7 /* DesignHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				142EC06D20434F9500E593B7 /* BroColors.swift */,
+			);
+			path = DesignHelpers;
+			sourceTree = "<group>";
+		};
+		142EC06F2043555D00E593B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				142EC0702043556F00E593B7 /* BroChefTextField.swift */,
+				142EC072204356B800E593B7 /* BroChefTextView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		14654FF620409E7A00EEB33C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +175,8 @@
 		14FF6E7120329DAF00FA0BAE /* Baking Tools */ = {
 			isa = PBXGroup;
 			children = (
+				142EC06F2043555D00E593B7 /* Views */,
+				142EC06C20434F7900E593B7 /* DesignHelpers */,
 				14654FF620409E7A00EEB33C /* ViewControllers */,
 				1493D9E220362F5500A8FA32 /* Enums */,
 				14FF6EA42032A76300FA0BAE /* Model */,
@@ -331,14 +356,17 @@
 				1493D9E420362F8100A8FA32 /* Ingredient.swift in Sources */,
 				14654FF1203F747500EEB33C /* AddIngredientViewController.swift in Sources */,
 				1493D9E620363BC200A8FA32 /* Units.swift in Sources */,
+				142EC0712043556F00E593B7 /* BroChefTextField.swift in Sources */,
 				14654FF52040995F00EEB33C /* CheatSheetData.swift in Sources */,
 				14654FF32040991C00EEB33C /* CheatConversion.swift in Sources */,
+				142EC06E20434F9500E593B7 /* BroColors.swift in Sources */,
 				14FF6E7720329DAF00FA0BAE /* RecipesViewController.swift in Sources */,
 				14460B1A203DFEB300CCA4F5 /* Conversion.swift in Sources */,
 				14FF6EA82032A7BC00FA0BAE /* ProTipData.swift in Sources */,
 				14FF6EA62032A77900FA0BAE /* ProTip.swift in Sources */,
 				14FF6E7320329DAF00FA0BAE /* AppDelegate.swift in Sources */,
 				14654FC1203F3E1D00EEB33C /* BroChefDataModel.xcdatamodeld in Sources */,
+				142EC073204356B800E593B7 /* BroChefTextView.swift in Sources */,
 				14FF6EA32032A2C400FA0BAE /* ProTipsViewController.swift in Sources */,
 				14654FEF203F5D7C00EEB33C /* IngredientsViewController.swift in Sources */,
 				146550012040E77500EEB33C /* ScreenLockSwitchViewController.swift in Sources */,

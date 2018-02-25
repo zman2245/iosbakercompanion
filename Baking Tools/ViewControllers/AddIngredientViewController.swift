@@ -23,11 +23,6 @@ class AddIngredientViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // To keep element consistent with AddEditRecipeViewController
-        ingredientName.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
-        ingredientName.layer.borderWidth = 1.0
-        ingredientName.layer.cornerRadius = 5
     }
     
     @IBAction func tapSave(_ sender: UIBarButtonItem) {
@@ -44,8 +39,6 @@ class AddIngredientViewController : UIViewController {
         
         newIngredient.ingredient = nameText
         newIngredient.recipe = self.recipe
-//        newIngredient.setValue(nameText, forKey: "name")
-//        newIngredient.setValue(recipe, forKey: "recipe")
         
         do {
             try context.save()
