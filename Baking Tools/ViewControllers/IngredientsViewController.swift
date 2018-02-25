@@ -22,7 +22,7 @@ class IngredientsViewController : UITableViewController, AddIngredientResultDele
         
         self.ingredients = recipe.ingredients?.allObjects as! [IngredientModel]
         
-        print(recipe.name ?? "NIL")
+        self.navigationItem.title = recipe.name
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
