@@ -107,6 +107,12 @@
 		14654FF620409E7A00EEB33C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				14FF6E7420329DAF00FA0BAE /* CheatSheetController.swift */,
+				14FF6E7620329DAF00FA0BAE /* RecipesViewController.swift */,
+				14654FEE203F5D7C00EEB33C /* IngredientsViewController.swift */,
+				14FF6EA22032A2C400FA0BAE /* ProTipsViewController.swift */,
+				14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */,
+				14654FF0203F747500EEB33C /* AddIngredientViewController.swift */,
 				14654FF720409E9000EEB33C /* ConverterViewController.swift */,
 				146550002040E77500EEB33C /* ScreenLockSwitchViewController.swift */,
 			);
@@ -150,12 +156,6 @@
 				1493D9E220362F5500A8FA32 /* Enums */,
 				14FF6EA42032A76300FA0BAE /* Model */,
 				14FF6E7220329DAF00FA0BAE /* AppDelegate.swift */,
-				14FF6E7420329DAF00FA0BAE /* CheatSheetController.swift */,
-				14FF6E7620329DAF00FA0BAE /* RecipesViewController.swift */,
-				14654FEE203F5D7C00EEB33C /* IngredientsViewController.swift */,
-				14FF6EA22032A2C400FA0BAE /* ProTipsViewController.swift */,
-				14654FEC203F54F300EEB33C /* AddEditRecipeViewController.swift */,
-				14654FF0203F747500EEB33C /* AddIngredientViewController.swift */,
 				14FF6E7820329DAF00FA0BAE /* Main.storyboard */,
 				14FF6E7B20329DAF00FA0BAE /* Assets.xcassets */,
 				14FF6E7D20329DAF00FA0BAE /* LaunchScreen.storyboard */,
