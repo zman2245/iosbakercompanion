@@ -47,18 +47,20 @@ class RecipesViewController : UITableViewController, NSFetchedResultsControllerD
         }
     }
     
+    func getObject(atIndex indexPath: IndexPath) -> RecipeModel {
+        guard let object = self.fetchedResultsController?.object(at: indexPath) else {
+            fatalError("Attempt to configure cell without a managed object")
+        }
+        
+        return object as! RecipeModel
+    }
+    
     // MARK: - UITableView delegate methods
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)
-        
-        // Set up the cell
-        guard let object = self.fetchedResultsController?.object(at: indexPath) else {
-            fatalError("Attempt to configure cell without a managed object")
-        }
-        
-        let recipe = object as! RecipeModel
+        let recipe = getObject(atIndex: indexPath)
         
         cell.textLabel?.text = recipe.name
         
@@ -80,6 +82,20 @@ class RecipesViewController : UITableViewController, NSFetchedResultsControllerD
         
         self.selectedRecipe = (object as! RecipeModel)
         self.performSegue(withIdentifier: "ShowRecipeIngredients", sender: self)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let recipeModel : RecipeModel = self.getObject(atIndex: indexPath)
+            context.delete(recipeModel)
+            do {
+                try context.save()
+            } catch {
+                print("Failed deleting Ingredient: " + recipeModel.name!)
+            }
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
     }
     
     // MARK: - NSFetchedResultsControllerDelegate methods

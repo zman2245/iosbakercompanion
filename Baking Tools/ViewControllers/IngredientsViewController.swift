@@ -63,6 +63,23 @@ class IngredientsViewController : UITableViewController, AddIngredientResultDele
         // Nothing to do? Long press to delete? TODO
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            let context = delegate.persistentContainer.viewContext
+            let ingredientModel = ingredients.remove(at: indexPath.row)
+            context.delete(ingredientModel)
+            do {
+                try context.save()
+            } catch {
+                print("Failed deleting Ingredient: " + ingredientModel.ingredient!)
+            }
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+        }
+    }
+    
     // MARK: - AddIngredientResultDelegate methods
     
     func ingredientAdded(_ ingredient: IngredientModel) {
