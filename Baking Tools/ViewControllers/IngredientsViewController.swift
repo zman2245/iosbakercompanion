@@ -37,17 +37,26 @@ class IngredientsViewController : UITableViewController, AddIngredientResultDele
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsCell", for: indexPath)
-        
-        let ingredient : IngredientModel = self.ingredients[indexPath.row]
-        
-        cell.textLabel?.text = ingredient.ingredient
-        
-        return cell
+        if (indexPath.row == self.ingredients.count) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NotesCell", for: indexPath)
+            cell.textLabel?.text = "Notes"
+            cell.detailTextLabel?.text = self.recipe.notes
+            cell.detailTextLabel?.numberOfLines = 0
+            cell.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientsCell", for: indexPath)
+            
+            let ingredient : IngredientModel = self.ingredients[indexPath.row]
+            
+            cell.textLabel?.text = ingredient.ingredient
+            
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.ingredients.count
+        return self.ingredients.count + 1
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
