@@ -15,7 +15,7 @@ class ConverterViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let COMPONENT_TO_UNIT = 2
     
     @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet weak var fromUnitVal: UITextField!
+    @IBOutlet weak var fromUnitVal: BroChefTextField!
     @IBOutlet weak var toUnitVal: UITextField!
     
     var tableData: [[String]] = [[String]]()
@@ -43,6 +43,8 @@ class ConverterViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         
         tableData = [ingredientNames, unitNames, unitNames]
+        
+        fromUnitVal.addDoneButtonOnKeyboard()
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,9 +68,9 @@ class ConverterViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
         if (component == 0) {
-            return pickerView.frame.size.width/2.0
+            return pickerView.frame.size.width * 0.55
         } else {
-            return pickerView.frame.size.width/4.0
+            return pickerView.frame.size.width * 0.225
         }
     }
     
