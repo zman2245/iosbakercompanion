@@ -21,6 +21,10 @@ class IngredientsViewController : UITableViewController, AddIngredientResultDele
         super.viewDidLoad()
         
         self.ingredients = recipe.ingredients?.allObjects as! [IngredientModel]
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         self.navigationItem.title = recipe.name
     }
@@ -59,8 +63,27 @@ class IngredientsViewController : UITableViewController, AddIngredientResultDele
         return self.ingredients.count + 1
     }
     
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if (indexPath.row != self.ingredients.count) {
+            return nil
+        }
+        
+        return indexPath
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Nothing to do? Long press to delete? TODO
+        if (indexPath.row != self.ingredients.count) {
+            return
+        }
+        
+        // this is the flow to edit the notes and name of a recipe
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddRecipeNav") as! UINavigationController
+        let innerVc = vc.childViewControllers.first as! AddEditRecipeViewController
+        innerVc.recipe = self.recipe
+        vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        present(vc, animated: true, completion: {
+            tableView.reloadData()
+        });
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

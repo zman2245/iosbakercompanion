@@ -325,7 +325,7 @@
                             <outlet property="delegate" destination="f32-Vs-r21" id="ewH-jH-yZR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Ingredients" id="DNh-dW-uom" userLabel="Ingredients">
+                    <navigationItem key="navigationItem" id="DNh-dW-uom" userLabel="Ingredients">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ePA-eb-pe0">
                             <connections>
                                 <segue destination="hpG-Cu-NXv" kind="presentation" id="Sh7-em-cJ8"/>
@@ -536,7 +536,7 @@
         <!--Navigation Controller-->
         <scene sceneID="r1I-HX-CuY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qAh-BZ-N6o" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddRecipeNav" automaticallyAdjustsScrollViewInsets="NO" id="qAh-BZ-N6o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WZP-Qv-TLx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

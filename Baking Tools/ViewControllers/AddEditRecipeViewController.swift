@@ -15,8 +15,15 @@ class AddEditRecipeViewController : UIViewController {
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var notes: UITextView!
     
+    var recipe : RecipeModel? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (recipe != nil) {
+            name.text = recipe?.name
+            notes.text = recipe?.notes
+        }
     }
     
     @IBAction func tapSave(_ sender: UIBarButtonItem) {
@@ -26,14 +33,22 @@ class AddEditRecipeViewController : UIViewController {
         }
         
         let delegate = UIApplication.shared.delegate as! AppDelegate
-        let context = delegate.persistentContainer.viewContext
+        var context = delegate.persistentContainer.viewContext
         
-        let entity = NSEntityDescription.entity(forEntityName: "RecipeModel", in: context)
-        let newRecipe = NSManagedObject(entity: entity!, insertInto: context)
-        
-        newRecipe.setValue(nameText, forKey: "name")
-        newRecipe.setValue(notes.text, forKey: "notes")
-        
+        if (recipe != nil) {
+            // edit mode
+            recipe?.name = nameText
+            recipe?.notes = notes.text
+            context = (recipe?.managedObjectContext)!
+        } else {
+            // new mode
+            let entity = NSEntityDescription.entity(forEntityName: "RecipeModel", in: context)
+            let newRecipe = NSManagedObject(entity: entity!, insertInto: context)
+            
+            newRecipe.setValue(nameText, forKey: "name")
+            newRecipe.setValue(notes.text, forKey: "notes")
+        }
+
         do {
             try context.save()
         } catch {

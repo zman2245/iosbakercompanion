@@ -21,10 +21,7 @@ class ProTipsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
-
 
 // MARK: - UITableViewDataSource
 extension ProTipsViewController {
