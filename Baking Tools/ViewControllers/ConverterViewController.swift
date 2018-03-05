@@ -118,4 +118,23 @@ class ConverterViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         toUnitVal.text = String(format: "%.2f", result)
     }
+    
+    @IBAction func tapSwap(_ sender: UIButton) {
+        self.pickerView.dataSource = nil
+        self.fromUnitVal.removeTarget(self, action: #selector(recalculateToValue), for: .editingChanged)
+        
+        let fromUnitIndex = pickerView.selectedRow(inComponent: COMPONENT_FROM_UNIT)
+        let toUnitIndex = pickerView.selectedRow(inComponent: COMPONENT_TO_UNIT)
+        
+        pickerView.selectRow(fromUnitIndex, inComponent: COMPONENT_TO_UNIT, animated: true)
+        pickerView.selectRow(toUnitIndex, inComponent: COMPONENT_FROM_UNIT, animated: true)
+        
+        fromUnitVal.text = toUnitVal.text
+        
+        recalculateToValue()
+        
+        self.pickerView.dataSource = self
+        self.fromUnitVal.addTarget(self, action: #selector(recalculateToValue), for: .editingChanged)
+    }
+    
 }
